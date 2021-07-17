@@ -21,7 +21,7 @@ Correct it, save the file but do not commit it yet.
 We can review the changes that we made using:
 
 ~~~
-$ vim journal.md		# Add second reference to introduction
+$ nano journal.md		# Add second reference to introduction
 $ git diff journal.md		# View changes to file
 ~~~
 {: .language-bash}

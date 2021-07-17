@@ -3,8 +3,10 @@ title: "Tracking changes with a local repository"
 teaching: 35
 exercises: 0
 questions:
+- "Why use version control?"
 - "How do I get started with Git?"
 objectives:
+- "Describe reasons to use version control."
 - "Know how to set up a new Git repository."
 - "Understand how to start tracking files."
 - "Be able to commit changes to your repository."
@@ -18,6 +20,35 @@ keypoints:
 - "`git commit` saves the staged content as a new commit in the local repository"
 - "Always write a log message when committing changes"
 ---
+
+## Why version control?
+
+Let's admit it, we all already use some form of version control. Think of the
+ways that you and co-authors on papers keep track of the changes that you make
+to your documents. It can be a particular naming scheme (often including a date,
+and maybe the name of the author that made the most recent changes). Version
+control was originally designed to achieve a similar goal in the context of
+software development. It was originally really just meant to keep track of a
+linear set of changes, so that if an error creeps in, the authors of the
+software can go back and figure out what changed and when and root out the
+error. But along the way, something interesting and quite wonderful happened.
+People using version control also realized that it is a powerful tool for
+facilitating collaboration. That's because you can make changes on your version
+of the code and I can make changes on my version of the code and we can both
+compare these changes to the current state of the main version of the code and
+to each other. We can also start having conversations around these differences.
+This makes a lot of complicated conversations about proposed changes much more
+concrete, because you can show people what you mean, instead of just telling
+them. It turns out that this pattern also translates to many other kinds of
+text, like documents, grants, even designs. And so, people who use version
+control sometimes end up using it in many different aspects of their life, and
+with a variety of different collaborators. I can tell you from personal
+experience that the consistent use of version control tools has made me overall
+a happier and more productive collaborator with others.
+
+That said: wrapping your head around the concepts and details of using version control can be challenging at first. It's probably the thing that you will learn at NeuroHackademy that will take the longest to get used to. So, buckle in and get ready for the ride.
+
+## What is a repository?
 
 Version control is centered round the notion of a *repository* which holds your
 directories and files. We'll start by looking at a local repository. The local
@@ -65,10 +96,10 @@ We'll now tell Git which editor we want to be the default
 (i.e. the one that Git will bring by default whenever it wants us to provide some information).
 
 You can choose any editor available on your system.
-For the purpose of this session we'll assume you're on the course JupyterHub and use *vim*:
+For the purpose of this session we'll assume you're on the course JupyterHub and use *nano*, a very simple text editor:
 
 ~~~
-$ git config --global core.editor vim
+$ git config --global core.editor nano
 ~~~
 {: .language-bash}
 
@@ -86,8 +117,11 @@ directory, we'll see a `.gitconfig` file,
 
 ~~~
 $ cat ~/.gitconfig
-    [user] name = Your Name email = yourname@yourplace.org
-    [core] editor = vim
+    [user]
+        name = Your Name
+        email = yourname@yourplace.org
+    [core]
+        editor = nano
 ~~~
 {: .language-bash}
 
@@ -147,7 +181,7 @@ Now, we'll create a file. Let's say we're going to write a journal paper, so
 we will start by adding the author names and a title, then save the file.
 
 ~~~
-$ vim journal.md
+$ nano journal.md
 # Add author names and paper title
 ~~~
 {: .language-bash}
@@ -233,7 +267,7 @@ we need to  **commit** it:
 ~~~
 $ git commit
 # Type a commit message: "Add title and authors"
-# Save the commit message and close your text editor (vim, notepad etc.)
+# Save the commit message and close your text editor (nano, notepad etc.)
 ~~~
 {: .language-bash}
 
@@ -275,7 +309,7 @@ Now we will work a bit further on our *journal.md* file by writing the introduct
 section.
 
 ```
-$ vim journal.md
+$ nano journal.md
 # Write introduction section
 ```
 {: .language-bash}
@@ -323,14 +357,14 @@ want to reuse:
 
 ~~~
 $ mkdir common
-$ vim common/references.txt					# Add a reference
+$ nano common/references.txt					# Add a reference
 ~~~
 {: .language-bash}
 
 We will also add a citation in our introduction section (in journal.md).
 
 ~~~
-$ vim journal.md 						# Use reference in introduction
+$ nano journal.md 						# Use reference in introduction
 ~~~
 {: .language-bash}
 
