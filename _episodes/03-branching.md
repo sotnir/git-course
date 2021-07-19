@@ -104,3 +104,17 @@ $ git checkout master
 Switched to branch 'master'
 ~~~
 {: .output}
+
+
+Notice that the changes that are in the `paperWJohn` branch are not present here. They exist only in that branch! When switching between branches, git literally goes to look for that branch inside of the `.git` directory, and like checking out a book from the library, it checks that state of the filesystem out of the repository to replace the current state.
+
+### Merging it back together
+
+To combine the changes that are in this other branch with your previous work, you can run
+
+~~~
+$ git merge paperWJohn
+~~~
+{: .language-bash}
+
+This adds into your current branch the work that was, until now, only on that other branch. And you can keep going from here.

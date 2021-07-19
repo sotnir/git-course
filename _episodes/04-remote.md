@@ -74,6 +74,32 @@ $ git remote add origin https://github.com/<USERNAME>/git-papers.git
 This line sets up an alias `origin`,
 to correspond to the URL of our new repository on GitHub.
 
+### Generating an ssh key for access to GitHub:
+
+To be able to push changes to GitHub, you will need to generate an ssh key and upload the public part of that key to GitHub. This will allow your computer and GitHub to recognize each other.
+
+Start by generating a key:
+```
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+{: .language-bash}
+
+Save the file to its default location and protect it with a password. Then:
+
+```
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+```
+{: .language-bash}
+
+
+To add this key to your ssh configuration.
+
+Next, we go to GitHub to add this key to your account, proceed to [https://github.com/settings/keys](https://github.com/settings/keys).
+
+We copy the contents of the public key: `less ~/.ssh/id_ed25519.pub` into a new ssh key entry (name it so we remember it). Now, we are ready to push our work to a remote repository.
+
+
 ### Push locally tracked files to a remote repository
 
 Now we can execute the following:
