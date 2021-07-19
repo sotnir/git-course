@@ -56,7 +56,6 @@ repository is set up in a directory in your local file system (local machine).
 For this we will use the command line interface.
 
 > ## Why are we using the command line?
-
 > There are lots of graphical user interfaces (GUIs) for using Git: both stand-alone
 > and integrated into text editors (e.g. VSCode).
 > We are deliberately not using a GUI for this course because:
