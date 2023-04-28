@@ -9,14 +9,13 @@ root: .
 > Some previous experience with the shell is expected,
 > *but is not mandatory*.
 >
-> We expect that participants will execute this lesson on the
-> NeuroHackademy JupyterHub (hub.neurohackademy.org).
+> We expect that participants will execute this lesson on JupyterHub.
 >
-> If instead you'd like to execute it locally, you can use your
-> local unix shell (either natively on Mac & Linux or under WSL on Windows).
+> You can also use your local unix shell (either natively on Mac 
+> & Linux or under WSL on Windows).
 >
 > Alternatively, this course can be followed on Windows using
-> Git Bash.
+> [Git Bash](https://www.atlassian.com/git/tutorials/git-bash).
 > All of the commands shown will work on Windows using Git Bash,
 > with the exception of the `nano` command.
 > nano is a common text editor on Linux:
