@@ -18,6 +18,8 @@ keypoints:
   `local repository` (where commits are permanently recorded)"
 - "`git add` puts files in the staging area"
 - "`git commit` saves the staged content as a new commit in the local repository"
+- "`git commit -a` add all tracked files to the staging area, which can be useful 
+  when many files need to be updated"
 - "Always write a log message when committing changes"
 ---
 
@@ -40,13 +42,18 @@ to each other. We can also start having conversations around these differences.
 This makes a lot of complicated conversations about proposed changes much more
 concrete, because you can show people what you mean, instead of just telling
 them. It turns out that this pattern also translates to many other kinds of
-text, like documents, grants, even designs. And so, people who use version
+text, like protocols, documents, even designs. And so, people who use version
 control sometimes end up using it in many different aspects of their life, and
 with a variety of different collaborators. I can tell you from personal
 experience that the consistent use of version control tools has made me overall
-a happier and more productive collaborator with others.
+a happier and more productive collaborator with others, and I am sure this is a
+great skill that I gained from my academic research experience that can be
+translated in the clinical practices of medical physics and to develop better
+clinical support services.
 
-That said: wrapping your head around the concepts and details of using version control can be challenging at first. It's probably the thing that you will learn at NeuroHackademy that will take the longest to get used to. So, buckle in and get ready for the ride.
+With that being said, wrapping your head around the concepts and details of using 
+version control can be challenging at first. This is probably going to take more time 
+than you initially thought to get used to. So, buckle in and get ready for the ride!
 
 ## What is a repository?
 
@@ -57,18 +64,18 @@ For this we will use the command line interface.
 
 > ## Why are we using the command line?
 > There are lots of graphical user interfaces (GUIs) for using Git: both stand-alone
-> and integrated into text editors (e.g. VSCode).
+> and integrated into text editors (e.g. [Visual Studio Code](https://code.visualstudio.com/)).
 > We are deliberately not using a GUI for this course because:
 >
 > * you will have a better understanding of how the git commands work
 > * you will be able to use Git on any computer
-> (e.g. remotely accessing HPC systems, which generally only have Linux command line access)
+> (e.g. remotely accessing HPC (High-Performance Computing) systems, which generally only have Linux command line access)
 > * you will be able to use any GUI, rather than just the one you have learned
 {: .callout}
 
 ## Setting up Git
 
-If you're using the course JupyterHub, git should already be installed.
+If you're using JupyterHub, git should have already been installed.
 If you need to install git locally, instructions are under [setup]({{ page.root }}/setup).
 
 ## Tell Git who we are
@@ -102,9 +109,16 @@ $ git config --global core.editor nano
 ~~~
 {: .language-bash}
 
-To set up alternative editors, follow the same notation e.g.
-`git config --global core.editor notepad`, `git config --global core.editor vi`,
-`git config --global core.editor xemacs`.
+To set up alternative editors, follow the same notation, e.g.:
+
+~~~
+$ git config --global core.editor notepad
+$ git config --global core.editor vi
+$ git config --global core.editor xemacs
+~~~
+{: .language-bash}
+
+This should work for Linux and WSL users.
 
 Mac users can use *TextEdit*: `git config --global core.editor 'open -W -n'`.
 
@@ -116,18 +130,20 @@ directory, we'll see a `.gitconfig` file,
 
 ~~~
 $ cat ~/.gitconfig
+~~~
+{: .language-bash}
+~~~
     [user]
         name = Your Name
         email = yourname@yourplace.org
     [core]
         editor = nano
 ~~~
-{: .language-bash}
+{: .output}
 
-**These global configuration settings will apply to any new Git repository
-you create on the course JupyterHub.**
-If you are executing this tutorial locally, these settings would similarly persist over time;
-i.e. the `--global` commands above are only required once per computer.
+**These global configuration settings will apply to any new Git repository you create on the course JupyterHub.**
+If you are executing this tutorial locally, these settings would similarly persist over time, i.e., 
+the `--global` commands above are only required once per computer.
 
 ---
 
@@ -147,8 +163,7 @@ $ cd git-papers
 ```
 {: .language-bash}
 
-Now, we need to set up this directory up to be a Git repository (or "initiate
-the repository"):
+Now, we need to _initialize_ the repository, which means we now set this directory up to be a Git repository:
 
 ~~~
 $ git init
@@ -171,8 +186,7 @@ $ ls .git
 branches  config  description  HEAD  hooks  info  objects refs
 ~~~
 {: .output}
-The `.git` directory contains Git's configuration files. Be careful not to
-accidentally delete this directory!
+The `.git` directory contains Git's configuration files. **Be careful not to delete this directory by mistake!**
 
 ## Tracking files with a git repository
 
@@ -186,16 +200,17 @@ $ nano journal.md
 {: .language-bash}
 
 > ## Accessing files from the command line
-
 > In this lesson we create and modify text files using a command line interface
-> (e.g. terminal, Git Bash etc), mainly for convenience.
+> (e.g. terminal, Git Bash etc), mainly for convenience. 
+> These are normal files which are also accessible from the file browser 
+> on any operating system (e.g. Windows explorer), and by other programs.
 > JupyterHub also contains a native text editor that we can use to edit these files.
-> That is because these are normal files which are also accessible from the file browser on any operating system (e.g. Windows explorer),
-> and by other programs.
 {: .callout}
 
+## git status
+
 `git status` allows us to find out about the current status
-of files in the repository. So we can run,
+of files in the repository. So we can run:
 
 ~~~
 $ git status
@@ -221,11 +236,12 @@ the `master` branch, which is the default branch in a Git repository
 Don't worry -- we'll talk more about branches later).
 
 For now, the important bit of information is that our file is listed as
-**Untracked** which means it is in our working directory but Git is not
-tracking it - that is, any changes made to this file will not be recorded by
-Git.
+**Untracked**, meaning that it is in our working directory but Git is not
+tracking it, and therefore, any changes made to this file will not be recorded by Git.
 
 ## Add files to a Git repository
+
+### git add
 
 To tell Git about the file, we will use the `git add` command:
 
@@ -246,19 +262,20 @@ Changes to be committed:
 ~~~
 {: .output}
 
-Now our file is listed underneath where it says **Changes to be committed**.
+Now our file is listed underneath where it says `Changes to be committed`.
 
 `git add` is used for two purposes. Firstly, to tell Git that a given file
 should be tracked. Secondly, to put the file into the Git **staging area**
 which is also known as the *index* or the *cache*.
 
-The staging area can be viewed as a "loading dock", a place to hold files we have
-added, or changed, until we are ready to tell Git to record those changes in the
-repository.
+The staging area can be viewed as a "loading dock", a place to hold files we've added or changed, 
+until we are ready to tell Git to record those changes in the repository.
 
 ![The staging area](../fig/git-staging-area.svg)
 
 ## Commit changes
+
+### git commit
 
 In order to tell Git to record our change, our new file, into the repository,
 we need to  **commit** it:
@@ -348,11 +365,16 @@ area. Git already knows this file should be tracked but doesn't know if we want
 to commit the changes we made to the file  in the repository and hence we have
 to add the file to the staging area.
 
-It can sometimes be quicker to provide our commit messages at the command-line
-by doing `git commit -m "Write introduction section"`.
+### git commit -m "message"
 
-Let's add a directory *common* and a file *references.txt* for references we may
-want to reuse:
+It can be quicker to provide our commit messages at the command-line by doing: 
+
+~~~
+$ git commit -m "Write introduction section"
+~~~
+{: .language-bash}
+
+Let's add a directory *common* and a file *references.txt* for references we may want to reuse:
 
 ~~~
 $ mkdir common
@@ -360,15 +382,15 @@ $ nano common/references.txt					# Add a reference
 ~~~
 {: .language-bash}
 
-We will also add a citation in our introduction section (in journal.md).
+We will also add a citation in our introduction section (in _journal.md_).
 
 ~~~
 $ nano journal.md 						# Use reference in introduction
 ~~~
 {: .language-bash}
 
-Now we need to record our work in the repository so we need to make a commit.
-First we tell Git to track the references.
+Because we now need to record our work in the repository, we need to make a **commit**.
+First, we tell Git to track the references.
 We can actually tell Git to track everything in the given sub-directory:
 
 ~~~
@@ -377,18 +399,19 @@ $ git status							# Verify that common/references.txt is now tracked
 ~~~
 {: .language-bash}
 
-All files that are in *common* are now tracked.  We would also have to add
-journal.md in the staging area. But there is a shortcut. We can use
-`commit -a`. This option means "commit all files that are tracked and
-that have been modified".
+All files that are in *common* are now tracked.
+
+### git commit -a
+
+We would also have to add _journal.md_ in the staging area. But there is a shortcut. We can use
+`git commit -a`. This option means "commit all files that are tracked and that have been modified". 
+This may be very useful when you edit e.g. 10 files and now you want to commit all of them.
 
 ~~~
 $ git commit -am "Reference J Bloggs and add references file" 	# Add and commit all tracked files
 ~~~
 {: .language-bash}
-and Git will add, then commit, both the directory and the file.
 
-In order to add all tracked files to the staging area, use `git commit -a`
-(which may be very useful if you edit e.g. 10 files and now you want to commit all of them).
+and Git will add, then commit, both the directory and the file.
 
 ![The Git commit workflow](../fig/git-committing.svg)

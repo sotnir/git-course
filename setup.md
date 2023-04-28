@@ -17,7 +17,7 @@ If you are working on a Linux or MacOS machine,
 [please see here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) for git installation instructions.
 
 For Windows machines, we **highly recommend** that you install the Windows Subsystem for Linux (WSL).
-WSL installation instructions are [available here](https://neurodatasci-course-2020.netlify.app/setup/).
+WSL installation instructions are [available here](https://neurodatasci-course-2020.netlify.app/setup/). Alternatively, this course can be followed using [Git Bash](https://www.atlassian.com/git/tutorials/git-bash).
 
 GitHub does not require you to download any additional software;
 however, you will need to make a GitHub account.
