@@ -20,7 +20,7 @@ but sometimes you may not have a specific group of potential collaborators in mi
 
 This is especially true of open source projects,
 in which the community of potential contributors can be very big.
-Keeping the source code safe--but at the same allowing new people to make contributions--is one of the keys to success in open source.
+Keeping the source code safe--but at the same time allowing new people to make contributions--is one of the keys to success in open source.
 
 Leveraging the power of Git,
 GitHub provides a functionality called *Pull Requests*.
@@ -31,7 +31,7 @@ But as a contributor, pull requests provide a path to engage with the community.
 
 ## The process
 
-- Find a repository on GitHub that belongs to someone else (e.g., https://github.com/emdupre/more-papers)
+- Find a repository on GitHub that belongs to someone else (e.g., https://github.com/yukaizou2015/git-paper)
 - **Fork** it on GitHub's servers into your GitHub account
 - Then `git clone` it to your PC/laptop
 - Make changes, and push them to your repository on GitHub
