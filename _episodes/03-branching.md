@@ -48,7 +48,7 @@ We can create a branch, e.g. `feature1`, to keep track of the development of the
 After merging `feature1` branch with `master`, git creates a new commit which contains merged files from `master` and `feature1`. **The merged branch is not deleted.** After the merge, we can continue developing (i.e. making commits) along `feature1`.
 
 
-> ## Exercise: Branching in practice (click on the arrow to expand)
+> ## Exercise: How can John contribute?
 > 
 >  One of our colleagues wants to contribute to the paper, but is not quite sure if it will actually make a publication. So it will be safer to create a branch and carry on working on this "experimental" version of the paper in a branch rather than in the master.
 > 
