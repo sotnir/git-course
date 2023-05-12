@@ -14,7 +14,9 @@ keypoints:
 ---
 
 
-## Looking at differences: git diff
+## Looking at differences
+
+### git diff
 
 We forgot to reference a second paper in the introduction section.
 Correct it, save the file but do not commit it yet.
@@ -48,7 +50,9 @@ $ git commit			# "Reference second paper in introduction"
 ```
 {: .language-bash}
 
-## Looking at our history: git log
+## Looking at our history
+
+### git log
 
 To see the history of changes that we made to our repository (the most recent
 changes will be displayed at the top):
@@ -163,7 +167,9 @@ So, we can get any version of our files, from any point in time! In other words,
 we can set up our working directory back to any stage it was when we made
 a commit!
 
-### Retain commits: git checkout -b
+## Retaining commits
+
+### git checkout -b
 
 If we want to make a commit now, we must create a new branch to retain these commits. Otherwise, if we created a new commit without creating a new branch first, these commits would not overwrite any of our existing work, but they would not be saved, because they don't belong to any branch. Therefore, In order to save this work, we would need to checkout a new branch.
 
