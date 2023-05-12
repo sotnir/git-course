@@ -10,9 +10,9 @@ objectives:
 - "Understand how to push local changes to a remote repository"
 - "Understand how to clone a remote repository"
 keypoints:
-- "Git is the version control system: GitHub is a remote repositories provider."
-- "`git clone` to make a local copy of a remote repository"
+- "GitHub is a remote repositories provider."
 - "`git push` to send local changes to remote repository"
+- "`git clone` to make a local copy of a remote repository"
 ---
 
 We're going to set up a remote repository that we can use from multiple
