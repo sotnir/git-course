@@ -50,7 +50,7 @@ After merging `feature1` branch with `master`, git creates a new commit which co
 
 > ## Exercise: How can John contribute?
 > 
->  One of our colleagues wants to contribute to the paper, but is not quite sure if it will actually make a publication. So it will be safer to create a branch and carry on working on this "experimental" version of the paper in a branch rather than in the master.
+> One of our colleagues, John, wants to contribute to the paper, but is not quite sure if it will actually make a publication. So it will be safer to create a branch and carry on working on this "experimental" version of the paper in a branch rather than in the master. So let's get John onboard.
 > 
 > ~~~
 > $ git checkout -b paperWJohn
@@ -96,9 +96,8 @@ After merging `feature1` branch with `master`, git creates a new commit which co
 > 
 > Notice that the changes that are in the `paperWJohn` branch are not present here. They exist only in that branch! When switching between branches, git literally goes to look for that branch inside of the `.git` directory, and like checking out a book from the library, it checks that state of the filesystem out of the repository to replace the current state.
 > 
-> ### Merging it back together
 > 
-> To combine the changes that are in this other branch with your previous work, you can run
+> To merge the changes that are in this other branch together with your previous work, run
 > 
 > ~~~
 > $ git merge paperWJohn
