@@ -28,8 +28,8 @@ root: .
 {: .prereq}
 
 > ## Resources
-> You can check out the slides for this workshop [here](https://slides.com/emdupre/git-course).
-> Note that there are lots of other great resources out there !
+> This course is modified based on NeuroHackademy (see slides [here](https://slides.com/emdupre/git-course) and YouTube videos [here](https://youtu.be/Lsmt2rHPJDU)).
+> Note that there are lots of other great resources out there!
 > Here are a few of our favorites:
 >
 > * [Introduction to GitHub: A visual guide](https://zenodo.org/record/3369466)
