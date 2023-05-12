@@ -158,17 +158,19 @@ $ ls
 common journal.md
 ~~~
 {: .output}
-So we can get any version of our files from any point in time. In other words,
+
+So, we can get any version of our files, from any point in time! In other words,
 we can set up our working directory back to any stage it was when we made
 a commit!
 
-If we want to make a commit now, we should create a new branch to retain these commits.
-If we created a new commit without first creating a new branch, these commits would not overwrite any of our existing work, but they would not belong to any branch.
-In order to save this work, we would need to checkout a new branch.
+### Retain commits: git checkout -b
+
+If we want to make a commit now, we must create a new branch to retain these commits. Otherwise, if we created a new commit without creating a new branch first, these commits would not overwrite any of our existing work, but they would not be saved, because they don't belong to any branch. Therefore, In order to save this work, we would need to checkout a new branch.
+
 To discard any changes we make, we can just checkout master again.
 
-> ## Where to create a Git repository?
-> Avoid creating a Git repository within another Git repository.
-> Nesting repositories in this way causes the 'outer' repository to
-> track the contents of the 'inner' repository - things will get confusing!
-{: .callout}
+## Avoid nesting repository
+
+Avoid creating a Git repository within another Git repository.
+Nesting repositories in this way causes the 'outer' repository to
+track the contents of the 'inner' repository - things will get confusing!
