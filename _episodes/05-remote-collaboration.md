@@ -11,7 +11,7 @@ objectives:
 keypoints:
 - "`git fetch` to get remote changes and allow inspecting any conflicts with the local commits before proceeding"
 - "`git merge` to overwrite local commits with the fetched remote changes"
-- "`git pull` executes both `fetch` and `pull`, to integrate remote changes into local copy of repository"
+- "`git pull` executes both `fetch` and `merge`, to integrate remote changes into local copy of repository"
 ---
 
 
