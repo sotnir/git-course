@@ -19,7 +19,7 @@ We're going to set up a remote repository that we can use from multiple
 locations. The remote repository can also be shared with colleagues, if we want
 to.
 
-### GitHub
+## What is GitHub?
 
 [GitHub](http://GitHub.com) is a company which provides remote repositories for
 Git and a range of functionalities supporting their use. GitHub allows users to
@@ -34,24 +34,15 @@ projects including:
 * Issue and bug tracking
 * Project management tools
 
-### GitHub for research
-
-GitHub **isn't** the only remote repositories provider.
-It is very popular, however, particularly within the open source communities.
-
-Also, GitHub has [functionality which is particularly useful
-for researchers](https://github.com/blog/1840-improving-github-for-sciences)
-such as making code citable!
+It is important to note that GitHub **isn't** the only remote repositories provider. Some of the other providers include [GitLab](https://about.gitlab.com/) and [Bitbucket](https://bitbucket.org/). However, GitHub is very popular and especially within the open source communities. GitHub has [functionality which is particularly useful for researchers](https://github.com/blog/1840-improving-github-for-sciences).
 
 ---
 
-### Get an account
+## Create an account
 
-Let's get back to our tutorial. We'll first need a GitHub account.
+Let's get back to our tutorial. We'll first need a GitHub account. Please [sign up](https://GitHub.com) if you don't have an account, or [sign in](https://GitHub.com) if you already have one.
 
-[Sign up](https://GitHub.com) or [sign in](https://GitHub.com) if you already have an account.
-
-### Create a new repository
+## Create a new repository
 
 Now, we can create a repository on GitHub,
 
@@ -74,7 +65,7 @@ $ git remote add origin https://github.com/<USERNAME>/git-papers.git
 This line sets up an alias `origin`,
 to correspond to the URL of our new repository on GitHub.
 
-### Generating an ssh key for access to GitHub:
+## Generating an ssh key for access to GitHub:
 
 To be able to push changes to GitHub, you will need to generate an ssh key and upload the public part of that key to GitHub. This will allow your computer and GitHub to recognize each other.
 
@@ -100,7 +91,7 @@ Next, we go to GitHub to add this key to your account, proceed to [https://githu
 We copy the contents of the public key: `less ~/.ssh/id_ed25519.pub` into a new ssh key entry (name it so we remember it). Now, we are ready to push our work to a remote repository.
 
 
-### Push locally tracked files to a remote repository
+## Push locally tracked files to a remote repository
 
 Now we can execute the following:
 
@@ -147,7 +138,7 @@ $ git branch -a
 ```
 {: .language-bash}
 
-> ## Deleting branches (for information only)
+> ## Find out more: Deleting branches
 > **Don't do this now.** This is just for information.
 > To delete branches, use the following syntax:
 >
@@ -158,7 +149,9 @@ $ git branch -a
 > {: .language-bash}
 {: .callout}
 
-### Cloning a remote repository
+## Cloning a remote repository
+
+### git clone
 
 Now, let's do something drastic!
 But before that step,
@@ -213,7 +206,9 @@ $ git checkout paperWJohn			# Check out the paperWJohn branch
 ```
 {: .language-bash}
 
-### Push changes to a remote repository
+## Push changes to a remote repository
+
+### git push
 
 We can use our cloned repository just as if it were the original, local repository !
 So, let's make some changes to our files and commit these.
@@ -243,5 +238,4 @@ type:
 ```
 $ git remote -v
 ```
-{: .language-bash}
 {: .language-bash}
