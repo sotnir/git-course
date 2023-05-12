@@ -10,17 +10,22 @@ objectives:
 - "Understand how to resolve merge conflicts"
 keypoints:
 - "`git pull` to integrate remote changes into local copy of repository"
+- "`git fetch` to get remote changes and allow inspecting any conflicts with the local commits before proceeding"
+- "`git merge` to overwrite local commits with the fetched remote changes"
 ---
 
 
 ### Pulling changes from a remote repository
 
-Now when we have a remote repository, we can share it and collaborate with
-others (and we can also work from multiple locations: for example from a laptop
-and a desktop in the lab). But how do we get the latest changes? One way is
-simply to clone the repository every time-- but this is inefficient, especially
-if our repository is very large! So, Git allows us to get the latest changes
-down from a repository.
+When we have a remote repository, we can share it and collaborate with
+others, and we can also work from multiple locations, from a laptop at home
+and a desktop PC in the lab. 
+
+But how do we get the latest changes? 
+
+Well, one way is simply to clone the repository every time. But this is inefficient, especially if our repository is very large! 
+
+In fact, Git allows us to get the latest changes down from a repository. 
 
 We'll first do a "dry run" of pulling changes from a remote repository and
 then we'll work in pairs for some real-life practice.
@@ -145,24 +150,19 @@ $ git log
 ```
 {: .language-bash}
 
-> ## `Fetch` vs `pull`
-> If `git pull` is a shortcut for `git fetch` followed by `git merge` then, why would
-> you ever want to do these steps separately?
+> ## `git fetch` vs `git pull`
+> If `git pull` is a shortcut for `git fetch` followed by `git merge` then, why would you ever want to do these steps separately?
 >
-> Well, depending on what the commits on the remote branch contain,
-> you might want to e.g., abandon your local commits before merging.
->
-> Fetching first lets you inspect the changes
-> before deciding what you want to do with them.
+> Well, `git fetch` first lets you inspect the changes before
+> deciding what you want to do with them. 
+> Depending on what the commits on the remote branch contain,
+> you might want to abandon your local commits before merging.
 {: .callout}
 
 ### Conflicts and how to resolve them
 
-Let's continue to pretend that our two local, cloned, repositories are hosted
-on two different machines.
-You should currently be in the original *git-papers* folder.
-Let's add an affiliation for each author,
-and then push these changes to our remote repository:
+Let's continue to pretend that our two local clones of the repository are hosted
+on two different machines. You should currently be in the original *git-papers* folder. Let's add an affiliation for each author, and then push these changes to our remote repository:
 
 ```
 $ nano journal.md		# Add author affiliations
