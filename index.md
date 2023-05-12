@@ -27,14 +27,14 @@ root: .
 > if you do not already have one.
 {: .prereq}
 
-## Resources
-
-You can check out the slides for this workshop [here](https://slides.com/emdupre/git-course).
-
-Note that there are lots of other great resources out there !
-Here are a few of our favorites:
-
-* [Introduction to GitHub: A visual guide](https://zenodo.org/record/3369466)
-* [Mozilla open leadership GitHub training](https://mozilla.github.io/open-leadership-training-series/articles/get-your-project-online/introducing-github-for-collaborative-work-and-version-control/)
-* [Happy Git and GitHub for the useR](https://happygitwithr.com/)
-* [try.github.io](https://try.github.io/)
+> ## Resources
+> You can check out the slides for this workshop [here](https://slides.com/emdupre/git-course).
+> Note that there are lots of other great resources out there !
+> Here are a few of our favorites:
+>
+> * [Introduction to GitHub: A visual guide](https://zenodo.org/record/3369466)
+> * [Happy Git and GitHub for the useR](https://happygitwithr.com/)
+> * [Mozilla open leadership GitHub training](https://mozilla.github.io/open-leadership-training-series/articles/get-your-project-online/introducing-github-for-collaborative-work-and-version-control/)
+> * [ReproRehabDB: Using Git and GitHub](https://reprorehabdb.usc.edu/course/633e8792975e94a3253fabdc)
+> * [try.github.io](https://try.github.io/)
+{: .callout}
