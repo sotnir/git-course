@@ -1,6 +1,6 @@
 ---
 title: "Getting started with GitHub"
-teaching: 25
+teaching: 20
 exercises: 0
 questions:
 - "What is a remote repository?"

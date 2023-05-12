@@ -1,6 +1,6 @@
 ---
 title: "Tracking changes with a local repository"
-teaching: 35
+teaching: 30
 exercises: 0
 questions:
 - "Why use version control?"

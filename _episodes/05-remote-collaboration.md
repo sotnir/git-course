@@ -1,6 +1,6 @@
 ---
 title: "Collaborating with a remote repository"
-teaching: 25
+teaching: 20
 exercises: 0
 questions:
 - "How do I update my local repository with changes from the remote?"

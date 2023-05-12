@@ -4,6 +4,11 @@ title: "Instructor Notes"
 permalink: /guide/
 ---
 # Checklists
+## Scheduling
+- Set up in MS Office Calendar
+    - Give it a proper name (so it will show up properly on the recording)
+- Post the meeting link as a feed in Teams channel
+
 ## On the day
 - Is your terminal clear from the back of the room?
 	- Use a large font
@@ -19,6 +24,9 @@ permalink: /guide/
 - Which text editors are installed?
 	- How do you change the font size?
 
+## After the day
+- Copy the recording from OneDrive to `Shared Documents/Recordings` under the Teams channel
+
 # Cut-down version
 For teaching as part of a Software Carpentry workshop:
 - 1 Intro
@@ -28,3 +36,15 @@ For teaching as part of a Software Carpentry workshop:
 - 5 Branching
 - ? 6 Undoing changes (if time)
 - 9 Remote repositories
+
+# Learning Git basics
+Based on [Bitbucket](https://www.atlassian.com/git) here is a list of the basics covering how Git works: 
+- 1 Create a "repository" (project) with a git hosting tool (like Bitbucket)
+- 2 Copy (or clone) the repository to your local machine
+- 3 Add a file to your local repo and "commit" (save) the changes
+- 4 "Push" your changes to your main branch
+- 5 Make a change to your file with a git hosting tool and commit
+- 6 "Pull" the changes to your local machine
+- 7 Create a "branch" (version), make a change, commit the change
+- 8 Open a "pull request" (propose changes to the main branch)
+- 9 "Merge" your branch to the main branch
