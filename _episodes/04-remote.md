@@ -93,6 +93,8 @@ We copy the contents of the public key: `less ~/.ssh/id_ed25519.pub` into a new 
 
 ## Push locally tracked files to a remote repository
 
+### git push
+
 Now we can execute the following:
 
 ```
@@ -120,7 +122,7 @@ Our local repository is now available on GitHub.
 This means that anywhere we can access GitHub,
 we can access our repository!
 
-### Push other local branches to a remote repository
+## Push other local branches to a remote repository
 
 Let's push each of our local branches into our remote repository:
 
@@ -207,8 +209,6 @@ $ git checkout paperWJohn			# Check out the paperWJohn branch
 {: .language-bash}
 
 ## Push changes to a remote repository
-
-### git push
 
 We can use our cloned repository just as if it were the original, local repository !
 So, let's make some changes to our files and commit these.
