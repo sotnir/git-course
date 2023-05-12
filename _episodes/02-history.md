@@ -11,7 +11,7 @@ keypoints:
 - "`git log` shows the commit history"
 - "`git diff` displays differences between commits"
 - "`git checkout` recovers old versions of files"
-   - "`git checkout -b` creates a new branch to retain the commits"
+- "`git checkout -b` creates a new branch to retain the commits"
 - "Avoid creating a Git repository within another Git repository"
 ---
 
