@@ -13,6 +13,8 @@ keypoints:
 - "A `pull request` asks the owner of a repository to incorporate your changes"
 ---
 
+![](../fig/github-based-project-pull-request.png)
+
 Pull Requests are a great solution for contributing to repositories to which
 you don't have write access.
 Adding other people as *collaborators* to a remote repository is a good idea,
