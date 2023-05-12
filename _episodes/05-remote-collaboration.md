@@ -9,13 +9,13 @@ objectives:
 - "Understand how to pull changes from remote repository"
 - "Understand how to resolve merge conflicts"
 keypoints:
-- "`git pull` to integrate remote changes into local copy of repository"
 - "`git fetch` to get remote changes and allow inspecting any conflicts with the local commits before proceeding"
 - "`git merge` to overwrite local commits with the fetched remote changes"
+- "`git pull` executes both `fetch` and `pull`, to integrate remote changes into local copy of repository"
 ---
 
 
-### Pulling changes from a remote repository
+## Pulling changes from a remote repository
 
 When we have a remote repository, we can share it and collaborate with
 others, and we can also work from multiple locations, from a laptop at home
@@ -80,6 +80,8 @@ $ git push
 ```
 {: .language-bash}
 
+### git fetch
+
 Now let's change directory to our other clone and `fetch` the commits from our remote repository:
 
 ```
@@ -98,6 +100,8 @@ $ git diff origin/master
 which compares our `master` branch with the `origin/master` branch.
 `origin/master` is the name of the `master` branch in `origin`
 (which is the alias for our cloned repository); that is, the one on GitHub.
+
+### git merge
 
 We can then `merge` these changes into our current repository,
 but given the history hasn't diverged, we don't need a merge commit.
@@ -122,6 +126,8 @@ We can inspect the file to confirm that we have our changes.
 $ cat journal.md
 ```
 {: .language-bash}
+
+### git pull
 
 Note that, as a short-hand,
 we can do a `git pull` which does a `git fetch` followed by a `git merge`.
@@ -150,8 +156,8 @@ $ git log
 ```
 {: .language-bash}
 
-> ## `git fetch` vs `git pull`
-> If `git pull` is a shortcut for `git fetch` followed by `git merge` then, why would you ever want to do these steps separately?
+> ## `fetch` vs `pull`
+> **Question: If `git pull` is a shortcut for `git fetch` followed by `git merge` then, why would you ever want to do these steps separately?**
 >
 > Well, `git fetch` first lets you inspect the changes before
 > deciding what you want to do with them. 
@@ -159,7 +165,7 @@ $ git log
 > you might want to abandon your local commits before merging.
 {: .callout}
 
-### Conflicts and how to resolve them
+## Resolve conflicts
 
 Let's continue to pretend that our two local clones of the repository are hosted
 on two different machines. You should currently be in the original *git-papers* folder. Let's add an affiliation for each author, and then push these changes to our remote repository:
