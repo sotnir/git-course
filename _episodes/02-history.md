@@ -14,7 +14,7 @@ keypoints:
 ---
 
 
-### Looking at differences
+## Looking at differences: git diff
 
 We forgot to reference a second paper in the introduction section.
 Correct it, save the file but do not commit it yet.
@@ -31,12 +31,15 @@ unstaged changes we have made.
 
 * `-` means a line was deleted.
 * `+` means a line was added.
-* Note that a line that has been edited is shown as a removal of the old line and an
-addition of the updated line.
+
+Note that a line that has been edited is shown as a removal of the old line AND an addition of the updated line.
 
 Looking at differences between commits is very useful!
-Note that the `git diff` command itself has a number of [useful
-options](http://git-scm.com/docs/git-diff.html).
+
+> ## Find out more
+> The `git diff` command itself has a number of [useful
+> options](http://git-scm.com/docs/git-diff.html).
+{: .callout}
 
 Now commit the change we made by adding the second reference:
 ```
@@ -45,7 +48,7 @@ $ git commit			# "Reference second paper in introduction"
 ```
 {: .language-bash}
 
-### Looking at our history
+## Looking at our history: git log
 
 To see the history of changes that we made to our repository (the most recent
 changes will be displayed at the top):
@@ -79,7 +82,7 @@ uniquely identifies the changes made in this commit
 
 Git automatically assigns an identifier (e.g. 4dd7f5) to each commit
 made to the repository
---- we refer to this as *COMMITID* in the code blocks below.
+--- we refer to this as *COMMITID* ("Commit ID", not a typo!) in the code blocks below.
 In order to see the changes made between any earlier commit and our
 current version, we can use  `git diff` followed by the commit identifier of the
 earlier commit:
