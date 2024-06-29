@@ -15,7 +15,7 @@ The following command it assumes that you are inside your cloned github repo. Ad
 
 ```
 docker run --rm -it --volume="$PWD:/srv/jekyll" --volume="$PWD/vendor/bundle:/usr/local/bundle" \
- --env JEKYLL_ENV=development -p 4000:4000 jekyll/jekyll:4.0.1 \
+ --env JEKYLL_ENV=development --platform linux/amd64 -p 4000:4000 jekyll/jekyll:4.0.1 \
  jekyll serve --config _config.yml,_config_dev.yml
 ```
 
