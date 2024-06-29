@@ -28,6 +28,7 @@ What this command does is
 - `--volume="$PWD:/srv/jekyll"` takes the current directory indicated by `$PWD` and map it to the directory at `/srv/jekyll` within the container so that it could build it
 - `--volume="$PWD/vendor/bundle:/usr/local/bundle"` this option maps the contents of the current directory's `/vendor/bundle` and maps it to `/usr/local/bundle`. The reason for this option is so that gems could be cached and reused in future builds
 - `--env JEKYLL_ENV=development` allows local development.
+- `--platform linux/amd64` allows mapping the host platform to linux/amd64, an known issue for Apple silicon (see [here](https://stackoverflow.com/questions/66662820/m1-docker-preview-and-keycloak-images-platform-linux-amd64-does-not-match-th))
 - `jekyll/jekyll:4.0.1` this tells it to use this specific tagged version of the Jekyll container
 - `jekyll serve --config _config.yml,_config_dev.yml` serves the live compiled content
 
